@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Management App</title>
+    <meta name="theme-color" content="#000000" />
+    <meta name="viewport" content="width=device-width">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+
+    <% flash.each do |type, msg| %>
+      <% if type == "notice" %>
+        <div class="notification is-primary">
+      <% elsif type == "alert" %>
+        <div class="notification is-danger">
+      <% else %>
+        <div class="notification is-warning">
+      <% end %>
+      <button class="delete"></button>
+        <%= msg %>
+    <% end %>
+    </div>
+    <%= yield %>
+  </body>
+</html>

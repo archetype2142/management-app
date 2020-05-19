@@ -1,0 +1,15 @@
+en:
+  taxonomy_categories_name: Categories
+  hello: "Hello world"
+
+  activerecord:
+    errors:
+      models:
+        image:
+          attributes:
+            attachment:
+              attachment_must_be_present: attachment must be present
+        variant:
+          attributes:
+            base:
+              must_supply_price_for_variant_or_master: must supply price for variant or master

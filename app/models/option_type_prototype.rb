@@ -1,0 +1,7 @@
+class OptionTypePrototype < ApplicationRecord
+  belongs_to :option_type, class_name: 'OptionType'
+  belongs_to :prototype, class_name: 'Prototype'
+
+  validates :prototype, :option_type, presence: true
+  validates :prototype_id, uniqueness: { scope: :option_type_id }
+end

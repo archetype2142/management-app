@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Management App</title>
+    <meta name="theme-color" content="#000000" />
+    <meta name="viewport" content="width=device-width">
+
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div id="root"></div>
+
+    <%= render 'layouts/navbar' %>
+
+    <% flash.each do |type, msg| %>
+      <% if type == "notice" %>
+        <div class="notification is-primary">
+      <% elsif type == "alert" %>
+        <div class="notification is-danger">
+      <% else %>
+        <div class="notification is-warning">
+      <% end %>
+      <button class="delete"></button>
+        <% if msg.kind_of?(Array) %>
+          <% msg.each do |m| %>
+            <%= m %>
+          <% end %>
+        <% else %>
+          <%= msg %>
+        <% end %>
+    <% end %>
+    </div>
+    <%= yield %>
+
+    <%= javascript_pack_tag "interactions", 'data-turbolinks-track': 'reload' %>  
+  </body>
+</html>

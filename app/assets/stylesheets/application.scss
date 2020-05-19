@@ -1,0 +1,69 @@
+@import "./colors";
+
+@import "bulma/bulma";
+
+@import "@fortawesome/fontawesome-free";
+@import "navbar";
+@import "sidebar";
+@import "tables";
+@import "modals";
+// @import "./grid";
+// @import "./namespaces";
+// @import "./steps";
+@import "./font";
+@import "./typography";
+@import "./utils";
+// @import "./tooltips";
+@import "./basics";
+// @import "./responses";
+// @import "./units";
+// @import "./forms";
+// @import "./atlas";
+// @import "./tables";
+
+.is-flex {
+  display: flex;
+}
+
+.is-flex-centered {
+  justify-content: center;
+  align-items: center;
+}
+
+.is-full-height {
+  height: 100vh;
+}
+
+.notification {
+  border-radius: 0px;
+}
+
+.sticky {
+  position: sticky;
+  top: 30px;
+}
+
+.hide-mob {
+  @include mobile {
+    display: none;
+  }
+}
+
+.file-label input {
+  background-color: white;
+  border-color: #dbdbdb;
+  border-width: 1px;
+  color: #363636;
+  cursor: pointer;
+  justify-content: center;
+  padding-bottom: calc(0.5em - 1px);
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: calc(0.5em - 1px);
+  text-align: center;
+  white-space: nowrap;
+}
+
+.notification {
+  border-top: 1px solid beige;
+}
