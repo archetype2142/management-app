@@ -1,24 +1,21 @@
-# README
+# Management App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+----
+## What?
+1. Warehouse management 
+2. Shop management 
+3. Stock Management
+4. E-commerce management
 
-Things you may want to cover:
+----
+## Requirements
+1. Rails <= 6.0.0
+2. Node <= v12.16.1
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+----
+## Installation
+`bundle install`
+ 
+`yarn install`
+ 
+`rails server` 
